@@ -6,6 +6,10 @@ var app = new Vue({
             title: "title",
             titleText: `Welcome to booleaner' shop`
         },
+        cart: {
+            name:"",
+            quantity:0
+        },
         products:{
             duck:{
                 name: 'duck',
@@ -43,6 +47,12 @@ var app = new Vue({
         duckColorHover(url){
             // console.log(this.products.duck.image.url);
             this.products.duck.image.url=url;
+        },
+        addToCart(){
+            this.cart.quantity+=1
+        },
+        removeFromCart(){
+            this.cart.quantity-=1
         }
     }
 });
