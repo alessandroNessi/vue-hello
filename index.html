@@ -10,11 +10,13 @@
 <body>
     <div id="app">
         <header>
-            <h1 :class="page.title">{{title}}</h1>
+            <h1 :class="page.title">{{page.titleText}}</h1>
         </header>
         <main>   
-                <p>{{ message }}</p>
-                <img v-bind:src="image.url" alt="image.description">
+                <a :href="products.duck.link">
+                    <h2>{{ products.duck.name }}</h2>
+                    <img :class=products.duck.image.class :src="products.duck.image.url" alt="image.description">
+                </a>
         </main>
     </div> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
