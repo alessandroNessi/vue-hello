@@ -15,6 +15,9 @@
         <main>   
                 <a :href="products.duck.link">
                     <h2>{{ products.duck.name }}</h2>
+                    <p v-if="products.duck.stock>0">in stock: {{products.duck.stock}}</p>
+                    <p v-else="products.duck.stock>0">out of stock</p>
+                    <span v-if="products.duck.sale > 0"> this producti is -{{products.duck.sale}}%</span>
                     <img :class=products.duck.image.class :src="products.duck.image.url" alt="image.description">
                 </a>
         </main>
