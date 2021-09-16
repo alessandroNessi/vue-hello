@@ -19,6 +19,7 @@
                     <p v-else="products.duck.stock>0">out of stock</p>
                     <span v-if="products.duck.sale > 0"> this producti is -{{products.duck.sale}}%</span>
                     <img :class=products.duck.image.class :src="products.duck.image.url" alt="image.description">
+                    <ul><li v-for="color in products.duck.colors">{{color}}</li></ul>
                 </a>
         </main>
     </div> 
